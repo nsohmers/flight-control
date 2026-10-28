@@ -14,8 +14,8 @@ enum {
 };
 
 enum {
-  GAMMA, // Gimbal
-  P,     // Thrust reduction
+  GAMMA, // Gimbal - deflection angle (rad) in the xz or yz plane
+  P,     // Thrust reduction - thrust = max_thrust * (1 - P)
   CONTROL_COUNT
 };
 
