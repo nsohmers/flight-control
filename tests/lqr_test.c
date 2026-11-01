@@ -11,7 +11,7 @@
 #include <math.h>
 #include <stdio.h>
 
-#include "../lqr/lqr.h"
+#include "lqr/lqr.h"
 
 static int failures = 0;
 static int checks = 0;

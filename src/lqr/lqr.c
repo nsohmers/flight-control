@@ -1,4 +1,4 @@
-#include "lqr.h"
+#include "lqr/lqr.h"
 #include <stdio.h>
 
 void compute_lqr_step(const LQRConfig *config, const float target[STATE_COUNT],
