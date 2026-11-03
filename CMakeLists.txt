@@ -10,6 +10,7 @@ add_library(flight_control
     "src/lqr/lqr.c"
     "src/lqr/lqr_config.c"
     "src/vehicle_controller.c"
+    "src/roll_control/roll_control.c"
 )
 
 target_include_directories(flight_control PUBLIC
@@ -32,6 +33,16 @@ target_link_libraries(vehicle_test PRIVATE
     flight_control
 )
 
+add_executable(roll_test 
+  "tests/roll_test.c"
+)
+
+target_link_libraries(roll_test PRIVATE 
+  flight_control
+)
+
+
 enable_testing()
 add_test(NAME lqr_checks COMMAND lqr_test)
 add_test(NAME vehicle_checks COMMAND vehicle_test)
+add_test(NAME roll_checks COMMAND roll_test)
