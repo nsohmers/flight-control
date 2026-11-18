@@ -16,5 +16,7 @@ typedef struct {
   float off_threshold_rad;
 } RollConfig;
 
+extern const RollConfig roll_config;
+
 RollCommand roll_step(const RollConfig *config, float roll_angle_rad,
                       float roll_rate_radps, RollCommand previous);

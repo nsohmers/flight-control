@@ -10,7 +10,7 @@ void compute_lqr_step(const LQRConfig *config, const float target[STATE_COUNT],
                                                 [P] = &config->p_limits};
 
   for (int i = 0; i < CONTROL_COUNT; i++) {
-    output[i] = 0.0f;
+    output[i] = config->trim[i];
 
     for (int j = 0; j < STATE_COUNT; j++) {
       float error = state[j] - target[j];

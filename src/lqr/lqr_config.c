@@ -26,6 +26,9 @@ const LQRConfig lqr_config = {
                 },
         },
 
+    // P_hover = 1 - m0 * g / T = 1 - 285 * 9.8 / 3000
+    .trim = {[GAMMA] = 0.0f, [P] = 1.0f - 285.0f * 9.8f / 3000.0f},
+
     // From python
     .dt = (1.f / 15.f),
 

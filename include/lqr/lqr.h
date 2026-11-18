@@ -31,6 +31,11 @@ typedef struct {
 typedef struct {
   float K[CONTROL_COUNT][STATE_COUNT];
 
+  // Operating point the model is linearized about:
+  // output = trim - K * (state - target), before limits.
+  // python: P = P_hover + delta_P, P_hover = 1 - m0 * g / T
+  float trim[CONTROL_COUNT];
+
   float dt;
 
   ControlLimits gamma_limits;

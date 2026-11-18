@@ -11,6 +11,11 @@ add_library(flight_control
     "src/lqr/lqr_config.c"
     "src/vehicle_controller.c"
     "src/roll_control/roll_control.c"
+    "src/roll_control/roll_config.c"
+    "src/kalman_filter/kalman.c"
+    "src/kalman_filter/kalman_config.c"
+    "src/trajectory/trajectory.c"
+    "src/trajectory/trajectory_config.c"
 )
 
 target_include_directories(flight_control PUBLIC
